@@ -1,0 +1,39 @@
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<span class="social-media"> 
+					<span>Connect with Us</span> 
+					{% for social in site.socials%}	
+						<a id="{{social.title}}" title="{{social.title}}" rel="external" href="{{social.url}}"><i class="fa {{social.icon}}"></i></a> 
+					{% endfor %}
+				</span>
+			</div>
+			<div class="col-md-12 mt5">
+				<strong>Legal</strong> ---
+				<ul>
+					{% for footNav in site.footerNavigation.legal %}
+						<li><a href="{{site.baseurl}}/{{ footNav.url }}">{{ footNav.title }}</a></li>				
+					{% endfor %}
+								
+				</ul>
+			</div>
+			<div class="col-md-12 mt5">
+				<strong>About </strong> ---
+				<ul>
+					{% for footNav in site.footerNavigation.about %}
+						<li><a href="{{site.baseurl}}/{{ footNav.url }}">{{ footNav.title }}</a></li>				
+					{% endfor %}
+					
+				</ul>
+				<p class="copyright">Copyright © 1995-2017 Mail-List.com All Rights Reserved</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</div>
+<script src="{{site.baseurl}}/js/jquery.min.js"></script>
+<script src="{{site.baseurl}}/js/bootstrap.min.js"></script> 
+</body>
+</html>
